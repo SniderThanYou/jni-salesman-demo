@@ -8,5 +8,9 @@ public class Main {
         try (TimedScope scope = new TimedScope("Java")) {
             new TripOptimizerJava().printBestTrip(salesTrip);
         }
+
+        try (TimedScope scope = new TimedScope("C")) {
+            new TripOptimizerC().printBestTrip(salesTrip);
+        }
     }
 }
