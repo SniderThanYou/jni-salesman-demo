@@ -5,6 +5,7 @@ import java.util.Random;
 public class SalesTrip {
     City[] cities;
     Salesman salesman = new Salesman("Dave");
+    int cashValue;
 
     public SalesTrip(int numCities) {
         Random randomGenerator = new Random();
@@ -15,6 +16,7 @@ public class SalesTrip {
             int lon = randomGenerator.nextInt(100);
             cities[i] = new City(cityName, lat, lon);
         }
+        cashValue = numCities * 50000;
     }
 
     public City[] getCities() {
@@ -23,5 +25,9 @@ public class SalesTrip {
 
     public Salesman getSalesman() {
         return salesman;
+    }
+
+    public int getCashValue() {
+        return cashValue;
     }
 }

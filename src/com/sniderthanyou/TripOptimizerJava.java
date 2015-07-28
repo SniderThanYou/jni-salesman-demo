@@ -5,6 +5,7 @@ public class TripOptimizerJava {
     private double bestCost;
 
     public void printBestTrip(SalesTrip salesTrip) {
+        System.out.println("We're going to make " + salesTrip.getCashValue() + " on this trip!");
         String msg = salesTrip.getSalesman().getName()
                 + " should visit the cities in the following order:";
         System.out.println(msg);
